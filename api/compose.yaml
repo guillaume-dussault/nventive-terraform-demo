@@ -1,0 +1,20 @@
+services:
+  jokes-api:
+    image: stdevel/joke-api
+    networks:
+      - api_network
+
+  nginx:
+    build:
+      context: ./nginx
+    container_name: nginx_cors_proxy
+    ports:
+      - "8080:80" 
+    depends_on:
+      - jokes-api
+    networks:
+      - api_network
+
+networks:
+  api_network:
+    driver: bridge

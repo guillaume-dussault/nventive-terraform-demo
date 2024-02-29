@@ -1,0 +1,18 @@
+# IDE
+.idea
+.vscode
+
+# Terraform specific
+**/.terraform.lock.hcl
+**/.terraform/
+**/tfplan
+**/*.tfstate**
+
+# Temporary files
+.docs/footer.md
+
+.test
+
+**/.env
+
+.DS_STORE
